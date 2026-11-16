@@ -36,3 +36,46 @@ Play around local model
 | Model | Size |
 |-------|------|
 | qwen3:14b | 9.3 GB |
+
+
+
+# Python setup
+```bash
+$ python -m venv .venv
+$ source .venv/Scripts/activate
+$ python -m pip install ollama
+```
+
+
+# Four stages
+
+```
+local-ai-agent/
+│
+├── serving/
+│   ├── ollama_client.py
+│   └── inference_benchmark.py
+│
+├── agent/
+│   ├── tools.py
+│   ├── orchestration.py
+│   ├── api.py
+│   └── memory.py
+│
+├── evaluation/
+│   ├── datasets/
+│   ├── evaluate.py
+│   ├── metrics.py
+│   └── report.py
+│
+├── finetuning/
+│   ├── prepare_data.py
+│   ├── train.py
+│   └── evaluate_adapter.py
+│
+├── tests/
+├── configs/
+├── results/
+├── requirements.txt
+└── README.md
+```
